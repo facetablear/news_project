@@ -11,3 +11,6 @@ class News(models.Model):
     image = models.ImageField(upload_to='images/%Y/%m/%d/')
     is_published = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.title
+
